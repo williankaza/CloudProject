@@ -9,7 +9,7 @@ entity City {
 
 entity Product {
 	productName String,
-    updatedDate LocalDateTime,
+    updatedDate LocalDate,
     value Long,
     weight Long,
     category String,
