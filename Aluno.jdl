@@ -19,7 +19,7 @@ entity Curso {
 
 entity Turma{
 	nomeTurma String,
-	dataCriaca LocaDate,
+	dataCriaca LocalDate,
     observacoes TextBlob
 }
 
