@@ -1,0 +1,41 @@
+entity Country {
+	countryName String
+}
+
+entity City {
+	country String,
+	cityName String
+}
+
+entity Product {
+	productName String,
+    updatedDate LocalDateTime,
+    value Long,
+    weight Long,
+    category String,
+    city String
+}
+
+entity ProductCategory {
+	categoryName String
+}
+
+relationship ManyToOne {
+	City{country} to Country
+}
+
+relationship ManyToMany {
+	Product{city} to City
+}
+
+relationship OneToMany {
+	Product{category} to ProductCategory
+}
+
+relationship ManyToMany {
+	Job{task(title)} to Task{job}
+}
+
+// Set pagination options
+paginate ProductCategory with infinite-scroll
+paginate Country, City, Product with pagination
