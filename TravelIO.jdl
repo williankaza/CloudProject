@@ -32,10 +32,6 @@ relationship OneToMany {
 	Product{category} to ProductCategory
 }
 
-relationship ManyToMany {
-	Job{task(title)} to Task{job}
-}
-
 // Set pagination options
 paginate ProductCategory with infinite-scroll
 paginate Country, City, Product with pagination
