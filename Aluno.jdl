@@ -25,22 +25,10 @@ entity Turma{
 
 relationship ManyToMany {
 	Aluno{curso(nomeCurso)} to Curso{aluno(nome)}
-    Aluno{turma(nome)} to Turma{aluno(nome)}
+    Aluno{turma(nomeTurma)} to Turma{aluno(nome)}
 }
 
 relationship ManyToOne {
 	Turma{curso(nomeCurso)} to Curso
 }
 
-// Set pagination options
-paginate Aluno with infinite-scroll
-paginate Curso, Turma with pagination
-
-// Use Data Transfer Objects (DTO)
-// dto * with mapstruct
-
-// Set service options to all except few
-service all with serviceImpl
-
-// Set an angular suffix
-// angularSuffix * with mySuffix
