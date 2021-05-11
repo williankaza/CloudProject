@@ -34,8 +34,8 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://localhost:5432/hybridCloud
-    username: hybridCloud
-    password:
+    username: postgres
+    password: QPXtLAIs2zOUvWKlPTV4
     hikari:
       poolName: Hikari
       auto-commit: false

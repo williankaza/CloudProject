@@ -19,16 +19,16 @@ entity ProductCategory {
 	categoryName String
 }
 
-relationship OneToMany {
-	City{country} to Country
+relationship ManyToOne {
+	City to Country{cityName}
 }
 
 relationship ManyToMany {
 	Product{city(cityName)} to City{product}
 }
 
-relationship OneToMany {
-	Product{category} to ProductCategory
+relationship ManyToOne {
+	Product to ProductCategory{product(category)}
 }
 
 // Set pagination options
