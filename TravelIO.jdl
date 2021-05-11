@@ -3,7 +3,6 @@ entity Country {
 }
 
 entity City {
-	country String,
 	cityName String
 }
 
@@ -20,7 +19,7 @@ entity ProductCategory {
 	categoryName String
 }
 
-relationship ManyToOne {
+relationship OneToMany {
 	City{country} to Country
 }
 
