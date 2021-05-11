@@ -20,7 +20,7 @@ entity ProductCategory {
 }
 
 relationship ManyToOne {
-	City to Country{cityName}
+	City to Country{countryName}
 }
 
 relationship ManyToMany {
@@ -28,7 +28,7 @@ relationship ManyToMany {
 }
 
 relationship ManyToOne {
-	Product to ProductCategory{product(category)}
+	Product{category} to ProductCategory{categoryName}
 }
 
 // Set pagination options
