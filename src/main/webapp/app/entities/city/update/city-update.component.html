@@ -1,0 +1,70 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-city-heading" data-cy="CityCreateUpdateHeading" jhiTranslate="hybridCloudApp.city.home.createOrEditLabel">
+        Create or edit a City
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="hybridCloudApp.city.cityName" for="field_cityName">City Name</label>
+          <input type="text" class="form-control" name="cityName" id="field_cityName" data-cy="cityName" formControlName="cityName" />
+          <div *ngIf="editForm.get('cityName')!.invalid && (editForm.get('cityName')!.dirty || editForm.get('cityName')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('cityName')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="hybridCloudApp.city.country" for="field_country">Country</label>
+          <select class="form-control" id="field_country" data-cy="country" name="country" formControlName="country">
+            <option *ngIf="!editForm.get('country')!.value" [ngValue]="null" selected></option>
+            <option
+              [ngValue]="countryOption.id === editForm.get('country')!.value?.id ? editForm.get('country')!.value : countryOption"
+              *ngFor="let countryOption of countriesSharedCollection; trackBy: trackCountryById"
+            >
+              {{ countryOption.id }}
+            </option>
+          </select>
+        </div>
+        <div *ngIf="editForm.get(['country'])!.invalid && (editForm.get(['country'])!.dirty || editForm.get(['country'])!.touched)">
+          <small
+            class="form-text text-danger"
+            *ngIf="editForm.get(['country'])?.errors?.required"
+            jhiTranslate="entity.validation.required"
+          >
+            This field is required.
+          </small>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

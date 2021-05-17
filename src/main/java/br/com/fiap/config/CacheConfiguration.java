@@ -48,6 +48,18 @@ public class CacheConfiguration {
             createCache(cm, br.com.fiap.domain.User.class.getName());
             createCache(cm, br.com.fiap.domain.Authority.class.getName());
             createCache(cm, br.com.fiap.domain.User.class.getName() + ".authorities");
+            createCache(cm, br.com.fiap.domain.Country.class.getName());
+            createCache(cm, br.com.fiap.domain.Country.class.getName() + ".countryNames");
+            createCache(cm, br.com.fiap.domain.City.class.getName());
+            createCache(cm, br.com.fiap.domain.City.class.getName() + ".products");
+            createCache(cm, br.com.fiap.domain.Product.class.getName());
+            createCache(cm, br.com.fiap.domain.Product.class.getName() + ".cities");
+            createCache(cm, br.com.fiap.domain.ProductCategory.class.getName());
+            createCache(cm, br.com.fiap.domain.ProductCategory.class.getName() + ".products");
+            createCache(cm, br.com.fiap.domain.ProductDaily.class.getName());
+            createCache(cm, br.com.fiap.domain.City.class.getName() + ".cityNames");
+            createCache(cm, br.com.fiap.domain.Product.class.getName() + ".productNames");
+            createCache(cm, br.com.fiap.domain.ProductCategory.class.getName() + ".categoryNames");
             // jhipster-needle-ehcache-add-entry
         };
     }

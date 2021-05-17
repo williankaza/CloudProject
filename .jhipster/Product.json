@@ -1,0 +1,40 @@
+{
+  "name": "Product",
+  "fields": [
+    {
+      "fieldName": "productName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "weight",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "productCategory",
+      "otherEntityRelationshipName": "categoryName",
+      "relationshipValidateRules": "required",
+      "relationshipName": "category"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productDaily",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "productName"
+    }
+  ],
+  "changelogDate": "20210517011422",
+  "entityTableName": "product",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

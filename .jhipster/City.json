@@ -1,0 +1,36 @@
+{
+  "name": "City",
+  "fields": [
+    {
+      "fieldName": "cityName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "country",
+      "otherEntityRelationshipName": "countryName",
+      "relationshipValidateRules": "required",
+      "relationshipName": "country"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "productDaily",
+      "otherEntityRelationshipName": "city",
+      "relationshipName": "cityName"
+    }
+  ],
+  "changelogDate": "20210517011322",
+  "entityTableName": "city",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

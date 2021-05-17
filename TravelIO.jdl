@@ -1,34 +1,36 @@
 entity Country {
-	countryName String
+	countryName String required
 }
 
 entity City {
-	cityName String
+	cityName String required
 }
 
 entity Product {
-	productName String,
-    updatedDate LocalDate,
-    value Long,
-    weight Long,
-    category String,
-    city String
+	productName String required,
+    weight Long
 }
 
 entity ProductCategory {
-	categoryName String
+	categoryName String required
+}
+
+entity ProductDaily {
+	updatedDate LocalDate required,
+	value Long required
 }
 
 relationship ManyToOne {
-	City to Country{countryName}
-}
-
-relationship ManyToMany {
-	Product{city(cityName)} to City{product}
+	City{country required} to Country{countryName}
 }
 
 relationship ManyToOne {
-	Product to ProductCategory{product(category)}
+	Product{category required} to ProductCategory{categoryName}
+}
+
+relationship ManyToOne {
+	ProductDaily{product required} to Product{productName},
+    ProductDaily{city required} to City{cityName}
 }
 
 // Set pagination options

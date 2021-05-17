@@ -1,0 +1,27 @@
+{
+  "hybridCloudApp": {
+    "productDaily": {
+      "home": {
+        "title": "Product Dailies",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Product Daily",
+        "createOrEditLabel": "Create or edit a Product Daily",
+        "notFound": "No Product Dailies found"
+      },
+      "created": "A new Product Daily is created with identifier {{ param }}",
+      "updated": "A Product Daily is updated with identifier {{ param }}",
+      "deleted": "A Product Daily is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Product Daily {{ id }}?"
+      },
+      "detail": {
+        "title": "Product Daily"
+      },
+      "id": "ID",
+      "updatedDate": "Updated Date",
+      "value": "Value",
+      "product": "Product",
+      "city": "City"
+    }
+  }
+}

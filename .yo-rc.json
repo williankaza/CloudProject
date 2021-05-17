@@ -41,6 +41,8 @@
     "packageFolder": "br/com/fiap",
     "jwtSecretKey": "NGM3NDhlODYyNTIwODMxZThmZjFkMmFkMjI0YTAyYjQzZmFjY2U2ZTA3N2I4YzlhMjgwN2Q4YzE5NmMyMDMyMjQ1ODdhYzNmOGJhZjBiYjA4MjgwZGEwNWViMWE1NzA0Yzc5ZmI5MDI5ZjlmMGZlMzUxNjMzN2RjMThiMmQ5NGY=",
     "clientPackageManager": "npm",
-    "languages": ["pt-br", "en"]
+    "languages": ["pt-br", "en"],
+    "entities": ["City", "Product", "ProductCategory", "Country", "ProductDaily"],
+    "lastLiquibaseTimestamp": 1621221016000
   }
 }
