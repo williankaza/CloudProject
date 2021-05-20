@@ -33,9 +33,9 @@ spring:
       enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/hybridCloud
+    url: jdbc:postgresql://database-cloud.cluster-cgqu8akqvfhr.us-east-1.rds.amazonaws.com:5432/cloudDatabase
     username: postgres
-    password: QPXtLAIs2zOUvWKlPTV4
+    password: K4suSB4hjD5DWLbIRgObCopy
     hikari:
       poolName: Hikari
       auto-commit: false
