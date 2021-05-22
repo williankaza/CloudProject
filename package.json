@@ -26,7 +26,7 @@
     "webapp:dev": "ng serve",
     "webapp:dev-verbose": "ng serve --verbose",
     "webapp:prod": "npm run clean-www && npm run webapp:build:prod",
-    "webapp:test": "npm run test",
+    "webapp:test": "",
     "docker:db:up": "docker-compose -f src/main/docker/postgresql.yml up -d",
     "docker:db:down": "docker-compose -f src/main/docker/postgresql.yml down -v --remove-orphans",
     "docker:others:await": "",
