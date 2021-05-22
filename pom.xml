@@ -23,7 +23,7 @@
 
     <properties>
         <!-- Build properties -->
-        <maven.version>3.3.9</maven.version>
+        <maven.version>3.2.0</maven.version>
         <java.version>11</java.version>
         <node.version>v14.16.0</node.version>
         <npm.version>7.8.0</npm.version>
@@ -72,7 +72,7 @@
         <maven-idea-plugin.version>2.2.1</maven-idea-plugin.version>
         <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
-        <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
+        <maven-war-plugin.version>3.2.0</maven-war-plugin.version>
         <maven-checkstyle.version>3.1.2</maven-checkstyle.version>
         <checkstyle.version>8.41.1</checkstyle.version>
         <spring-nohttp-checkstyle.version>0.0.5.RELEASE</spring-nohttp-checkstyle.version>
@@ -307,6 +307,14 @@
         <dependency>
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-ssm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-context</artifactId>
         </dependency>
         <!-- jhipster-needle-maven-add-dependency -->
     </dependencies>
